@@ -33,6 +33,9 @@
       "QuantumES"
     ]
   },
+  "credits": {
+    "author": "mosquito"
+  },
   "ui": {
     "preset": "single-pair",
     "blocks": [

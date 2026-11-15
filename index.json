@@ -10,7 +10,10 @@
       "version": "v1.0.0",
       "native": true,
       "path": "cards/evo8/card.json",
-      "sha256": "d1aa743e315a0c047e62bb64ab0a9cb87e9e70350da322a7c71208b45651e92a"
+      "sha256": "d1ecea6a68c9c08f43353da043c52771ebe9808011924d6cf38ed89f63e4c5ff",
+      "credits": {
+        "author": "mosquito"
+      }
     },
     {
       "id": "evo4",
@@ -19,7 +22,10 @@
       "version": "v1.0.0",
       "native": true,
       "path": "cards/evo4/card.json",
-      "sha256": "013fec005c0bc66e0a8670f36fec50474d9655bb8e7700079567fc5290d24d9f"
+      "sha256": "88faa9291e24d741acd0157b4a6276d3c46d93ccfaba15ff9c5a86fe89a9deb8",
+      "credits": {
+        "author": "mosquito"
+      }
     },
     {
       "id": "ugm192",
@@ -28,7 +34,10 @@
       "version": "v0.1.0",
       "native": true,
       "path": "cards/ugm192/card.json",
-      "sha256": "00ab5f88e5bcb7b19cd2d440814d92217795f9e79d34b55dbedaa522c6b5e9d1"
+      "sha256": "771604c21fef454e895ead9cebaf1ebaede290c90ea79b4570c78784051ca1ba",
+      "credits": {
+        "author": "mosquito"
+      }
     },
     {
       "id": "fireface-ucx2",
@@ -37,7 +46,10 @@
       "version": "v0.0.1",
       "native": true,
       "path": "cards/fireface-ucx2/card.json",
-      "sha256": "03c15deb68dcaf6cb8d518f3b363bb955af8918259df5363115b5e07b38863be"
+      "sha256": "02611e4dc47c31a565bc224aa465b52c894b304953c8ab45b35d80b2193cbaca",
+      "credits": {
+        "author": "mosquito"
+      }
     },
     {
       "id": "ssl12",
@@ -46,7 +58,10 @@
       "version": "v0.1.0",
       "native": true,
       "path": "cards/ssl12/card.json",
-      "sha256": "bc0abad9dda7c8d5dfb6aec53868968baa9e4a50012b9161f2fb1812c6309ac4"
+      "sha256": "d3fb55b09691a8e754ff519884412be0fb3b76cffd54ee2ac4accc5fa10a042f",
+      "credits": {
+        "author": "mosquito"
+      }
     },
     {
       "id": "quantum-es4",
@@ -55,7 +70,10 @@
       "version": "v0.1.0",
       "native": false,
       "path": "cards/quantum-es4/card.json",
-      "sha256": "9175aa4ac330e95d63ba8611b4aa0b5ca3792090c717c22a14e080a264fa55ef"
+      "sha256": "8a8c76f2d421135a3d4e077d9108f68b24c76c5df3faf838fd54a782ce37fab6",
+      "credits": {
+        "author": "mosquito"
+      }
     }
   ]
 }

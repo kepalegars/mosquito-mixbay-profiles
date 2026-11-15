@@ -29,10 +29,15 @@ in Mixbay and only your local overrides apply to them.
 {
   "schema_version": 1,
   "spec": { "id": "evo8", "display": "Audient EVO 8", "...": "..." },
+  "credits": { "author": "mosquito", "contributors": ["@someone"] },
   "ui": { "preset": "evo8", "blocks": ["tabBar", "controlsGrid"] },
   "captures": []
 }
 ```
+
+`credits.author` is shown in Mixbay's profile info popup. Cards made inside
+mosquitOmarchy credit `mosquito`; add every outside contributor to
+`credits.contributors`.
 
 Presets: `evo8`, `evo4`, `ugm192`, `single-pair`, `auto`. A local
 `~/.config/mosquitomixbay/cards/<id>/user/layout.json` can override any `ui`

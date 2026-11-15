@@ -34,6 +34,15 @@
         "description": { "type": "string" },
         "card_match": { "type": "array", "items": { "type": "string" } },
         "bus_names": { "type": "array", "items": { "type": "string" } },
+        "setup": { "enum": ["", "oscmix", "douze"] },
+        "foundation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "sink": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]+$" },
+            "source": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]+$" }
+          }
+        },
         "caps": {
           "type": "object",
           "additionalProperties": false,
@@ -45,6 +54,18 @@
             "monitor_blend": { "type": "boolean" },
             "mixer": { "type": "boolean" }
           }
+        }
+      }
+    },
+    "credits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "author": { "type": "string", "minLength": 1 },
+        "contributors": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
         }
       }
     },
