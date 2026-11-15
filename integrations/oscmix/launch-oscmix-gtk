@@ -8,6 +8,9 @@
 # then opens the mixer. The daemon it started is stopped when the mixer
 # closes, so nothing is left holding the card.
 #
+# Without a card the window still opens: oscmix-gtk has an offline mode with
+# a device picker. Mixbay only tells the user that CC mode may be off.
+#
 # The interface must be in Class Compliant mode (SETUP on the unit).
 # =============================================================================
 set -euo pipefail
@@ -31,7 +34,7 @@ hint() {
   if command -v lsusb >/dev/null 2>&1 && lsusb -d 2a39:3f82 >/dev/null 2>&1; then
     fail "The interface is in USB driver mode (2a39:3f82). Turn CC Mode on: on the unit SETUP → Options → CC Mode = ON. It re-enumerates as 2a39:3fd9 and gets an ALSA card."
   else
-    fail "No Class Compliant RME Fireface found. Check that it is connected with CC Mode on, then: aconnect -l (the client is named 'Fireface …')."
+    fail "No Class Compliant RME Fireface found — CC mode may be off. Check the unit (SETUP → Options → CC Mode) and: aconnect -l (the client is named 'Fireface …')."
   fi
 }
 
@@ -69,6 +72,20 @@ wait_osc() {
   done
 }
 
+# oscmix only announces the device in answer to /device/info, and this GTK
+# build never asks, so a running backend is never identified and the window
+# falls into its five-second offline device dialog. Ask for it while the
+# window owns the OSC receive port (8222), retrying until the timeout is over.
+# OSC: "/device/info" padded to 4 bytes + the "," type tag padded to 4.
+nudge_device() {
+  local pid=$1 i
+  for i in 1 2 3 4 5 6 7; do
+    kill -0 "$pid" 2>/dev/null || return 0
+    sleep 0.5
+    printf '/device/info\0\0\0\0,\0\0\0' > /dev/udp/127.0.0.1/7222 2>/dev/null || true
+  done
+}
+
 [[ -x $BIN_DIR/oscmix && -x $BIN_DIR/oscmix-gtk ]] \
   || { fail "oscmix is not installed — run Set up / repair oscmix in Mixbay."; exit 1; }
 
@@ -78,21 +95,29 @@ if [[ -f $PID_FILE ]] && kill -0 "$(cat "$PID_FILE")" 2>/dev/null; then
 else
   rm -f "$PID_FILE"
   mkdir -p "$STATE"
+  daemon=""
   if seq_port="$(alsa_client)"; then
     setsid "$BIN_DIR/alsaseqio" "$seq_port" "$BIN_DIR/oscmix" >>"$LOG" 2>&1 &
+    daemon=$!
   elif raw_port="$(raw_midi)"; then
     setsid "$BIN_DIR/alsarawio" "$raw_port" "$BIN_DIR/oscmix" >>"$LOG" 2>&1 &
+    daemon=$!
   else
+    # Offline mode: the window still opens, the picker renders the surface.
     hint
-    exit 1
   fi
-  echo $! > "$PID_FILE"
-  started=1
-  wait_osc
+  if [[ -n $daemon ]]; then
+    echo "$daemon" > "$PID_FILE"
+    started=1
+    wait_osc
+  fi
 fi
 
-GSETTINGS_SCHEMA_DIR="$LIB_DIR/gtk" "$BIN_DIR/oscmix-gtk" "$@"
-rc=$?
+GSETTINGS_SCHEMA_DIR="$LIB_DIR/gtk" "$BIN_DIR/oscmix-gtk" "$@" &
+gtk_pid=$!
+nudge_device "$gtk_pid"
+rc=0
+wait "$gtk_pid" || rc=$?
 
 if ((started)); then
   kill "$(cat "$PID_FILE")" 2>/dev/null || true

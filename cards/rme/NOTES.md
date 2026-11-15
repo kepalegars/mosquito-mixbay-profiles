@@ -12,12 +12,16 @@ What the cards in this folder have in common:
 - `setup: "oscmix"` — the closed set of integrations Mixbay may run. A card is
   data; it never carries a command or a URL.
 - every `caps` flag is `false` — the card menu is a flat list of actions, not a
-  control surface: **Open GTK mixer**, **Open Qt UI**, **Open web UI**,
+  control surface: **Open web UI**, **Open GTK mixer**, **Open Qt UI**,
   **Set up / repair oscmix**.
+- the web UI (`huddx01.github.io/oscmix`) is installed on first use as an
+  Omarchy web app (apps menu) with a dedicated Chromium profile whose MIDI
+  sysex exception is already granted; it needs no engine and no AppImage.
+- the GTK window opens without a card too (offline device picker); the
+  launcher only notifies that CC mode may be off.
 - the Qt row is greyed while upstream has no preview AppImage for the current
   nightly (the source is private and the binaries are uploaded by hand); it
-  un-greys as soon as the file exists. The web UI (`huddx01.github.io/oscmix`)
-  is the frontend that works today: Web MIDI straight to the card, no engine.
+  un-greys as soon as the file exists.
 - the interface must be in **Class Compliant** mode (`SETUP ▸ Options` on the
   unit). In USB driver mode Linux sees no ALSA card and no MIDI port, so
   nothing can reach it.

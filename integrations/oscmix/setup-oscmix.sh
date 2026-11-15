@@ -130,7 +130,7 @@ install_engine() {
   install -Dm644 "$DATA_DIR/gtk/gschemas.compiled" "$LIB_DIR/gtk/gschemas.compiled"
   # The launchers ship with this integration, not with Mixbay: deploy them so
   # the card menu can open the mixer.
-  for b in gtk qt; do
+  for b in gtk qt web; do
     [[ -f "$here/launch-oscmix-$b" ]] \
       && install -Dm755 "$here/launch-oscmix-$b" "$BIN_DIR/mixbay-oscmix-$b"
   done
@@ -168,7 +168,8 @@ uninstall() {
   info "Removing the per-user oscmix install"
   local b
   for b in "${BINS[@]}"; do rm -f "$BIN_DIR/$b"; done
-  rm -f "$BIN_DIR/mixbay-oscmix-gtk" "$BIN_DIR/mixbay-oscmix-qt"
+  rm -f "$BIN_DIR/mixbay-oscmix-gtk" "$BIN_DIR/mixbay-oscmix-qt" "$BIN_DIR/mixbay-oscmix-web"
+  command -v omarchy-webapp-remove >/dev/null 2>&1 && omarchy-webapp-remove oscmix >/dev/null 2>&1 || true
   rm -rf "$LIB_DIR" "$DATA_DIR"
   ok "oscmix removed"
 }

@@ -166,12 +166,13 @@
       }
     },
     "oscmix": {
-      "version": "1",
+      "version": "2",
       "path": "integrations/oscmix",
       "files": {
-        "launch-oscmix-gtk": "f0870237b6bbb36cf250a0a2276802ee8e1729e95201334c86acc2727dec45e4",
+        "launch-oscmix-gtk": "156b9d275bed5e46db0804694c6588d7ad4871ec1a7588c7cd9c72a81b0831cb",
         "launch-oscmix-qt": "0c1fc6b82519bc0600f611af3b98365c372569a781a80f7a2ead2fbb761aca97",
-        "setup-oscmix.sh": "2b8bc3604fba96af61771103cd495bed881c173988a8dfe72606b9cc5289993b"
+        "launch-oscmix-web": "2c353bb1ace019c39f8a64d155d0f06bfe99af77fdc6f3ee06be94f0dd23d3b2",
+        "setup-oscmix.sh": "e3cb329d03b3152de51dc0762f4487147fd650fd8f484cf0239e9f3050b9a48e"
       }
     }
   }
