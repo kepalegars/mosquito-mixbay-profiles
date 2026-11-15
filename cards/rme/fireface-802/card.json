@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "spec": {
+    "id": "fireface-802",
+    "display": "RME Fireface 802",
+    "vendor": "RME",
+    "usb_vid": "2a39",
+    "usb_pid": "3xxx",
+    "num_inputs": 8,
+    "num_output_pairs": 4,
+    "gain_min_db": 0,
+    "gain_max_db": 65,
+    "vol_min_db": -96,
+    "vol_max_db": 0,
+    "mixer_inputs": 8,
+    "mixer_outputs": 4,
+    "has_monitor": false,
+    "backend": "alsa",
+    "needs_kmod": false,
+    "version": "v0.1.0",
+    "caps": {
+      "volume": false,
+      "gain": false,
+      "mute": false,
+      "phantom_48v": false,
+      "monitor_blend": false,
+      "mixer": false
+    },
+    "card_match": [
+      "Fireface 802 at"
+    ],
+    "setup": "oscmix",
+    "description": "Class Compliant mode: oscmix (huddx01 fork) owns the mixer — open the GTK or Qt UI from the card menu. Mixbay shows actions only."
+  },
+  "credits": {
+    "author": "mosquito"
+  },
+  "ui": {
+    "preset": "auto",
+    "blocks": [
+      "controlsGrid",
+      "statusBar",
+      "help"
+    ]
+  },
+  "captures": []
+}

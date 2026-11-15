@@ -4,7 +4,9 @@ Community interface profiles for **mosquitomixbay**, the mosquitOmarchy USB-audi
 control bay. One folder per card, no executable code: Mixbay downloads only the
 card you select, validates it, and deploys it atomically.
 
-`index.json` is the entry point. Every card lives in `cards/<id>/card.json`.
+`index.json` is the entry point. Every card lives in `<folder>/<id>/card.json`.
+Most sit directly under `cards/`; devices that share one integration are
+grouped, e.g. `cards/rme/` for every supported RME Fireface.
 
 ## Layout
 
@@ -12,7 +14,9 @@ card you select, validates it, and deploys it atomically.
 index.json                 list of cards (id, version, path, sha256)
 schema/card.schema.json    profile schema, validated by CI
 cards/<id>/card.json        spec + capabilities + UI layout
+cards/rme/<id>/card.json    RME CC-mode cards, one shared oscmix integration
 cards/<id>/captures/        distilled JSONL captures (optional)
+cards/rme/NOTES.md          what the RME cards share (oscmix, CC mode)
 ```
 
 Heavy raw USB sessions are **not** stored here. They stay as release

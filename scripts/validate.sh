@@ -13,6 +13,7 @@ jq -e '.schema_version == 1 and (.cards|type=="array")' index.json >/dev/null \
 
 while IFS=$'\t' read -r id path sha; do
   [[ -n $id ]] || continue
+  carddir=$(dirname "$path")
   [[ $id =~ ^[a-z0-9][a-z0-9-]*$ ]] || { err "unsafe id: $id"; continue; }
   [[ $path == cards/*/card.json && $path != *..* ]] || { err "unsafe path for $id: $path"; continue; }
   [[ -f $path ]] || { err "missing $path"; continue; }
@@ -22,7 +23,7 @@ while IFS=$'\t' read -r id path sha; do
     || err "card shape for $id"
   while IFS= read -r cap; do
     [[ -n $cap ]] || continue
-    [[ -f "cards/$id/$cap" ]] || err "missing capture cards/$id/$cap"
+    [[ -f "$carddir/$cap" ]] || err "missing capture $carddir/$cap"
   done < <(jq -r '.captures[]?.file // empty' "$path")
 done < <(jq -r '.cards[] | [.id,.path,.sha256] | @tsv' index.json)
 
