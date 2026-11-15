@@ -7,10 +7,10 @@
       "id": "evo8",
       "display": "Audient EVO 8",
       "vendor": "Audient",
-      "version": "v1.0.0",
+      "version": "v1.0.1",
       "native": true,
       "path": "cards/evo8/card.json",
-      "sha256": "09372a33445b1cae2a368b3b78ea315029c75aa5489c6e793b5ee54f30e3bc01",
+      "sha256": "faf0833a33ef333492c314afcf56f8cb35b160e706020adc896cfc8bfa11cd70",
       "credits": {
         "author": "mosquito"
       }
@@ -19,10 +19,10 @@
       "id": "evo4",
       "display": "Audient EVO 4",
       "vendor": "Audient",
-      "version": "v1.0.0",
+      "version": "v1.0.1",
       "native": true,
       "path": "cards/evo4/card.json",
-      "sha256": "5dd06fc899dbd3e26f2934cddf27942c9b3c11228d03d41c0980372b6a958c5b",
+      "sha256": "7f04bafe329a699096eddff389924fc8550fbe5b0e236281c6e10c0e192270e0",
       "credits": {
         "author": "mosquito"
       }
