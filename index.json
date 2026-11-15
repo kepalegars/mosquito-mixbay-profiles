@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "name": "mosquito mixbay profiles",
+  "revision": "2026-11-14",
+  "cards": [
+    {
+      "id": "evo8",
+      "display": "Audient EVO 8",
+      "vendor": "Audient",
+      "version": "v1.0.0",
+      "native": true,
+      "path": "cards/evo8/card.json",
+      "sha256": "d1aa743e315a0c047e62bb64ab0a9cb87e9e70350da322a7c71208b45651e92a"
+    },
+    {
+      "id": "evo4",
+      "display": "Audient EVO 4",
+      "vendor": "Audient",
+      "version": "v1.0.0",
+      "native": true,
+      "path": "cards/evo4/card.json",
+      "sha256": "013fec005c0bc66e0a8670f36fec50474d9655bb8e7700079567fc5290d24d9f"
+    },
+    {
+      "id": "ugm192",
+      "display": "ESI UGM192",
+      "vendor": "ESI",
+      "version": "v0.1.0",
+      "native": true,
+      "path": "cards/ugm192/card.json",
+      "sha256": "00ab5f88e5bcb7b19cd2d440814d92217795f9e79d34b55dbedaa522c6b5e9d1"
+    },
+    {
+      "id": "fireface-ucx2",
+      "display": "RME Fireface UCX II",
+      "vendor": "RME",
+      "version": "v0.0.1",
+      "native": true,
+      "path": "cards/fireface-ucx2/card.json",
+      "sha256": "03c15deb68dcaf6cb8d518f3b363bb955af8918259df5363115b5e07b38863be"
+    },
+    {
+      "id": "ssl12",
+      "display": "Solid State Logic SSL 12",
+      "vendor": "SSL",
+      "version": "v0.1.0",
+      "native": true,
+      "path": "cards/ssl12/card.json",
+      "sha256": "bc0abad9dda7c8d5dfb6aec53868968baa9e4a50012b9161f2fb1812c6309ac4"
+    },
+    {
+      "id": "quantum-es4",
+      "display": "PreSonus Quantum ES 4",
+      "vendor": "PreSonus",
+      "version": "v0.1.0",
+      "native": false,
+      "path": "cards/quantum-es4/card.json",
+      "sha256": "9175aa4ac330e95d63ba8611b4aa0b5ca3792090c717c22a14e080a264fa55ef"
+    }
+  ]
+}

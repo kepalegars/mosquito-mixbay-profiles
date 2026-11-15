@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "spec": {
+    "id": "quantum-es4",
+    "display": "PreSonus Quantum ES 4",
+    "vendor": "PreSonus",
+    "usb_vid": "194f",
+    "usb_pid": "010d",
+    "num_inputs": 4,
+    "num_output_pairs": 2,
+    "gain_min_db": 0,
+    "gain_max_db": 60,
+    "vol_min_db": -96,
+    "vol_max_db": 0,
+    "mixer_inputs": 4,
+    "mixer_outputs": 2,
+    "has_monitor": false,
+    "backend": "alsa",
+    "needs_kmod": false,
+    "version": "v0.1.0",
+    "beta": true,
+    "caps": {
+      "volume": true,
+      "gain": false,
+      "mute": true,
+      "phantom_48v": false,
+      "monitor_blend": false,
+      "mixer": false
+    },
+    "description": "Class-compliant USB. ALSA volumes only, no DSP. Reverse-engineering test base while the vendor protocol is mapped.",
+    "card_match": [
+      "Quantum ES",
+      "QuantumES"
+    ]
+  },
+  "ui": {
+    "preset": "single-pair",
+    "blocks": [
+      "controlsSingle",
+      "statusBar",
+      "help"
+    ]
+  },
+  "captures": []
+}
