@@ -52,5 +52,27 @@ if find cards -type f ! -name '*.json' ! -name '*.jsonl' ! -name 'NOTES.md' | gr
   err "unexpected file type inside cards/ (expected json/jsonl/NOTES.md)"
 fi
 
+# Profile-owned integrations (oscmix, evo-raw) are code, so they live outside
+# cards/, stay pinned file by file in index.json, and must be exactly listed.
+while IFS=$'\t' read -r name path version; do
+  [[ -n $name ]] || continue
+  [[ $name =~ ^[a-z0-9][a-z0-9-]*$ ]] || { err "unsafe integration name: $name"; continue; }
+  [[ $path == "integrations/$name" && $path != *..* ]] \
+    || { err "unsafe integration path: $path"; continue; }
+  [[ -d $path ]] || { err "missing $path"; continue; }
+  while IFS=$'\t' read -r file sha; do
+    [[ -n $file ]] || continue
+    [[ $file != */* && $file != *..* ]] || { err "unsafe file $file in $name"; continue; }
+    [[ -f "$path/$file" ]] || { err "missing $path/$file"; continue; }
+    got=$(sha256sum "$path/$file" | cut -d' ' -f1)
+    [[ $got == "$sha" ]] || err "sha256 mismatch for $name/$file"
+  done < <(jq -r --arg n "$name" '.integrations[$n].files | to_entries[] | [.key,.value] | @tsv' index.json)
+  while IFS= read -r f; do
+    rel=${f#"$path/"}
+    jq -e --arg n "$name" --arg f "$rel" '.integrations[$n].files | has($f)' index.json >/dev/null \
+      || err "unlisted file $f in $name"
+  done < <(find "$path" -type f)
+done < <(jq -r '.integrations // {} | to_entries[] | [.key,.value.path,.value.version] | @tsv' index.json)
+
 [[ $fail -eq 0 ]] && echo "profiles: ok"
 exit "$fail"

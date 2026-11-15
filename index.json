@@ -10,7 +10,7 @@
       "version": "v1.0.0",
       "native": true,
       "path": "cards/evo8/card.json",
-      "sha256": "d1ecea6a68c9c08f43353da043c52771ebe9808011924d6cf38ed89f63e4c5ff",
+      "sha256": "09372a33445b1cae2a368b3b78ea315029c75aa5489c6e793b5ee54f30e3bc01",
       "credits": {
         "author": "mosquito"
       }
@@ -22,7 +22,7 @@
       "version": "v1.0.0",
       "native": true,
       "path": "cards/evo4/card.json",
-      "sha256": "88faa9291e24d741acd0157b4a6276d3c46d93ccfaba15ff9c5a86fe89a9deb8",
+      "sha256": "5dd06fc899dbd3e26f2934cddf27942c9b3c11228d03d41c0980372b6a958c5b",
       "credits": {
         "author": "mosquito"
       }
@@ -70,7 +70,7 @@
       "version": "v0.1.0",
       "native": false,
       "path": "cards/rme/fireface-802/card.json",
-      "sha256": "bf6010b497ca13e0cf534bb72b51b2f5e419024eab003242e818c4d9232a1cde",
+      "sha256": "3d11da0e7248c7e4e9654ecb6ad7ed0df5e133579e42e9324f55b0c15bad8ac2",
       "credits": {
         "author": "mosquito"
       }
@@ -82,7 +82,7 @@
       "version": "v0.1.0",
       "native": false,
       "path": "cards/rme/fireface-ucx/card.json",
-      "sha256": "f78042d47b37c1059965dae8c36956e64f0614525ecc629479cdb94c14180b2e",
+      "sha256": "57c248355ac5ed3bc2a2163bc03be6981f034d459ae2887edffd7dcb863d95b0",
       "credits": {
         "author": "mosquito"
       }
@@ -94,7 +94,7 @@
       "version": "v0.2.0",
       "native": true,
       "path": "cards/rme/fireface-ucx2/card.json",
-      "sha256": "929c31d6d327a50c6e27573be8e0405b98b3d51bd29ad55e9253dacac9ce826e",
+      "sha256": "6a5fcb68b4e2c4ce0ebb55879439732a141f78525ac838af9125addc0c78dd57",
       "credits": {
         "author": "mosquito"
       }
@@ -106,7 +106,7 @@
       "version": "v0.1.0",
       "native": false,
       "path": "cards/rme/fireface-ufx/card.json",
-      "sha256": "e83374685ca9798c9e29f394ae0d25366d285577f8c1d615205300b23a152b39",
+      "sha256": "1139d1c80afe4a4c67ccd2fceec7a1aca4edb1abd056ef030b2d87355ea783d4",
       "credits": {
         "author": "mosquito"
       }
@@ -118,7 +118,7 @@
       "version": "v0.1.0",
       "native": false,
       "path": "cards/rme/fireface-ufx2/card.json",
-      "sha256": "8ecc63dc50b986e42c05fcbc504cd2486e1d09e89ac71def289a2f1202f0ae38",
+      "sha256": "6b8dc56444a46d4ce862d533d6729b7f2319d6fc1eb5a37b17aca48a3111dc27",
       "credits": {
         "author": "mosquito"
       }
@@ -130,7 +130,7 @@
       "version": "v0.1.0",
       "native": false,
       "path": "cards/rme/fireface-ufx3/card.json",
-      "sha256": "c16af42c264123070ee6624f15d0949aefaf7acf1028bc3628d971f9f0706e11",
+      "sha256": "2ce8b7239d47e22d4bd1853c20c420d3648855944e27062794d5460a4105c7a2",
       "credits": {
         "author": "mosquito"
       }
@@ -142,10 +142,30 @@
       "version": "v0.1.0",
       "native": false,
       "path": "cards/rme/fireface-ufxplus/card.json",
-      "sha256": "24a3d12622c90859a5af629f3d62f3e0b44fcf0bd9acf8e28929bf93e460bc98",
+      "sha256": "c73da41e08bd7054956de03d55c6c4f62d5b5b01012153f02ce9b8832405d229",
       "credits": {
         "author": "mosquito"
       }
     }
-  ]
+  ],
+  "integrations": {
+    "evo-raw": {
+      "version": "1",
+      "path": "integrations/evo-raw",
+      "files": {
+        "99-evo8-capture.rules": "586fb472998902b6622861adcd2d93c5ffaca40513b3d1acd8adb3be26c11cea",
+        "evo8-capture-enable.py": "149330f5affe8269ae9f40ce50508381ebd1b49b119b676121320094e9e6132e",
+        "install-evo-raw.sh": "18f51f3cd89c7f73165e082bc5f3d89ea5a03b40d11d8d35e945aa4503f1eb93"
+      }
+    },
+    "oscmix": {
+      "version": "1",
+      "path": "integrations/oscmix",
+      "files": {
+        "launch-oscmix-gtk": "f0870237b6bbb36cf250a0a2276802ee8e1729e95201334c86acc2727dec45e4",
+        "launch-oscmix-qt": "c5f65481bd0bf9b8fb0ec2b3166cedafffcca0a2a4325e04a47cbb0dac53fe86",
+        "setup-oscmix.sh": "2b8bc3604fba96af61771103cd495bed881c173988a8dfe72606b9cc5289993b"
+      }
+    }
+  }
 }

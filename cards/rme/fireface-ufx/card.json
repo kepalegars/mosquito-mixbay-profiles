@@ -30,7 +30,8 @@
       "Fireface UFX at"
     ],
     "setup": "oscmix",
-    "description": "Class Compliant mode: oscmix (huddx01 fork) owns the mixer — open the GTK or Qt UI from the card menu. Mixbay shows actions only."
+    "description": "Class Compliant mode: oscmix (huddx01 fork) owns the mixer \u2014 open the GTK or Qt UI from the card menu. Mixbay shows actions only.",
+    "upstream": "https://raw.githubusercontent.com/kepalegars/mosquito-mixbay-profiles/main/cards/rme/fireface-ufx/card.json"
   },
   "credits": {
     "author": "mosquito"

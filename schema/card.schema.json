@@ -3,57 +3,164 @@
   "$id": "https://github.com/kepalegars/mosquito-mixbay-profiles/schema/card.schema.json",
   "title": "Mosquito Mixbay interface profile",
   "type": "object",
-  "required": ["schema_version", "spec", "ui"],
+  "required": [
+    "schema_version",
+    "spec",
+    "ui"
+  ],
   "additionalProperties": false,
   "properties": {
-    "schema_version": { "const": 1 },
+    "schema_version": {
+      "const": 1
+    },
     "spec": {
       "type": "object",
-      "required": ["id", "display", "vendor", "num_inputs", "num_output_pairs", "backend", "version", "caps"],
+      "required": [
+        "id",
+        "display",
+        "vendor",
+        "num_inputs",
+        "num_output_pairs",
+        "backend",
+        "version",
+        "caps"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
-        "display": { "type": "string", "minLength": 1 },
-        "vendor": { "type": "string", "minLength": 1 },
-        "usb_vid": { "type": "string" },
-        "usb_pid": { "type": "string" },
-        "num_inputs": { "type": "integer", "minimum": 1 },
-        "num_output_pairs": { "type": "integer", "minimum": 1 },
-        "gain_min_db": { "type": "number" },
-        "gain_max_db": { "type": "number" },
-        "gain_offset_db": { "type": "number" },
-        "vol_min_db": { "type": "number" },
-        "vol_max_db": { "type": "number" },
-        "mixer_inputs": { "type": "integer", "minimum": 0 },
-        "mixer_outputs": { "type": "integer", "minimum": 0 },
-        "has_monitor": { "type": "boolean" },
-        "backend": { "enum": ["evo-raw", "alsa", "douze", "demo"] },
-        "needs_kmod": { "type": "boolean" },
-        "version": { "type": "string", "minLength": 1 },
-        "beta": { "type": "boolean" },
-        "description": { "type": "string" },
-        "card_match": { "type": "array", "items": { "type": "string" } },
-        "bus_names": { "type": "array", "items": { "type": "string" } },
-        "setup": { "enum": ["", "oscmix", "douze"] },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "display": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vendor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "usb_vid": {
+          "type": "string"
+        },
+        "usb_pid": {
+          "type": "string"
+        },
+        "num_inputs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "num_output_pairs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "gain_min_db": {
+          "type": "number"
+        },
+        "gain_max_db": {
+          "type": "number"
+        },
+        "gain_offset_db": {
+          "type": "number"
+        },
+        "vol_min_db": {
+          "type": "number"
+        },
+        "vol_max_db": {
+          "type": "number"
+        },
+        "mixer_inputs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mixer_outputs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "has_monitor": {
+          "type": "boolean"
+        },
+        "backend": {
+          "enum": [
+            "evo-raw",
+            "alsa",
+            "douze",
+            "demo"
+          ]
+        },
+        "needs_kmod": {
+          "type": "boolean"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "beta": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "card_match": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bus_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "setup": {
+          "enum": [
+            "",
+            "oscmix",
+            "douze",
+            "evo-raw"
+          ]
+        },
         "foundation": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "sink": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]+$" },
-            "source": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]+$" }
+            "sink": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            },
+            "source": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_.:-]+$"
+            }
           }
         },
         "caps": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "volume": { "type": "boolean" },
-            "gain": { "type": "boolean" },
-            "mute": { "type": "boolean" },
-            "phantom_48v": { "type": "boolean" },
-            "monitor_blend": { "type": "boolean" },
-            "mixer": { "type": "boolean" }
+            "volume": {
+              "type": "boolean"
+            },
+            "gain": {
+              "type": "boolean"
+            },
+            "mute": {
+              "type": "boolean"
+            },
+            "phantom_48v": {
+              "type": "boolean"
+            },
+            "monitor_blend": {
+              "type": "boolean"
+            },
+            "mixer": {
+              "type": "boolean"
+            }
           }
+        },
+        "upstream": {
+          "type": "string",
+          "pattern": "^https://raw\\.githubusercontent\\.com/kepalegars/mosquito-mixbay-profiles/.*\\.json$"
         }
       }
     },
@@ -61,23 +168,49 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "author": { "type": "string", "minLength": 1 },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
         "contributors": {
           "type": "array",
           "uniqueItems": true,
-          "items": { "type": "string", "minLength": 1 }
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       }
     },
     "ui": {
       "type": "object",
-      "required": ["preset"],
+      "required": [
+        "preset"
+      ],
       "additionalProperties": true,
       "properties": {
-        "preset": { "enum": ["evo8", "evo4", "ugm192", "single-pair", "auto"] },
+        "preset": {
+          "enum": [
+            "evo8",
+            "evo4",
+            "ugm192",
+            "single-pair",
+            "auto"
+          ]
+        },
         "blocks": {
           "type": "array",
-          "items": { "enum": ["tabBar", "controlsGrid", "controlsSingle", "mixerGrid", "levelsColumns", "statusBar", "help"] }
+          "items": {
+            "enum": [
+              "tabBar",
+              "controlsGrid",
+              "controlsSingle",
+              "mixerGrid",
+              "levelsColumns",
+              "statusBar",
+              "help"
+            ]
+          }
         }
       }
     },
@@ -85,11 +218,22 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["file", "sha256"],
+        "required": [
+          "file",
+          "sha256"
+        ],
         "properties": {
-          "file": { "type": "string", "pattern": "^captures/[a-z0-9._-]+\\.jsonl$" },
-          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
-          "label": { "type": "string" }
+          "file": {
+            "type": "string",
+            "pattern": "^captures/[a-z0-9._-]+\\.jsonl$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "label": {
+            "type": "string"
+          }
         }
       }
     }
