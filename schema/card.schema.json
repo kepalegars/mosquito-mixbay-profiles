@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/mosquitomarchy/mosquito-mixbay-profiles/schema/card.schema.json",
+  "$id": "https://github.com/kepalegars/mosquito-mixbay-profiles/schema/card.schema.json",
   "title": "Mosquito Mixbay interface profile",
   "type": "object",
   "required": ["schema_version", "spec", "ui"],
