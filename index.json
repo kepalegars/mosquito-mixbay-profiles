@@ -170,7 +170,7 @@
       "path": "integrations/oscmix",
       "files": {
         "launch-oscmix-gtk": "f0870237b6bbb36cf250a0a2276802ee8e1729e95201334c86acc2727dec45e4",
-        "launch-oscmix-qt": "c5f65481bd0bf9b8fb0ec2b3166cedafffcca0a2a4325e04a47cbb0dac53fe86",
+        "launch-oscmix-qt": "0c1fc6b82519bc0600f611af3b98365c372569a781a80f7a2ead2fbb761aca97",
         "setup-oscmix.sh": "2b8bc3604fba96af61771103cd495bed881c173988a8dfe72606b9cc5289993b"
       }
     }

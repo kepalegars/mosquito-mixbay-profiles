@@ -19,7 +19,7 @@ fail() {
 }
 
 if [[ ! -x $APPIMAGE ]]; then
-  fail "The oscmix Qt UI is not installed (the project has not published an AppImage for this release). Use Open GTK mixer, or run Set up / repair oscmix."
+  fail "The oscmix Qt UI is not installed: upstream ships its preview AppImage only with some nightly builds, and the current one has none. Use Open GTK mixer — Set up / repair oscmix fetches the Qt UI automatically once upstream publishes it."
   exit 1
 fi
 
