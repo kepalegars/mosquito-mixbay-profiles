@@ -11,6 +11,24 @@ err(){ printf 'error: %s\n' "$*" >&2; fail=1; }
 jq -e '.schema_version == 1 and (.cards|type=="array")' index.json >/dev/null \
   || err "index.json shape"
 
+# RME cards are told apart by card_match, a substring of the
+# /proc/asound/cards long name. If one card's fragment also appears in another
+# card's name, Mixbay would open the wrong hardware's mixer: refuse that.
+rme_lines=$(jq -r '.cards[] | select(.path|startswith("cards/rme/")) | .path' index.json)
+while read -r a; do
+  [[ -n $a ]] || continue
+  aname=$(jq -r '.spec.display' "$a" | tr '[:lower:]' '[:upper:]')
+  while read -r b; do
+    [[ -n $b && $b != "$a" ]] || continue
+    bname=$(jq -r '.spec.display' "$b" | tr '[:lower:]' '[:upper:]')
+    while read -r m; do
+      [[ -n $m ]] || continue
+      up=$(printf '%s' "$m" | tr '[:lower:]' '[:upper:]')
+      [[ $bname == *"$up"* ]] && err "card_match '$m' in $a also matches $b"
+    done < <(jq -r '.spec.card_match[]?' "$a")
+  done <<< "$rme_lines"
+done <<< "$rme_lines"
+
 while IFS=$'\t' read -r id path sha; do
   [[ -n $id ]] || continue
   carddir=$(dirname "$path")
