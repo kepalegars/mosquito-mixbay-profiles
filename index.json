@@ -73,7 +73,8 @@
       "sha256": "3d11da0e7248c7e4e9654ecb6ad7ed0df5e133579e42e9324f55b0c15bad8ac2",
       "credits": {
         "author": "mosquito"
-      }
+      },
+      "upstream": "https://raw.githubusercontent.com/kepalegars/mosquito-mixbay-profiles/main/cards/rme/fireface-802/card.json"
     },
     {
       "id": "fireface-ucx",
@@ -85,7 +86,8 @@
       "sha256": "57c248355ac5ed3bc2a2163bc03be6981f034d459ae2887edffd7dcb863d95b0",
       "credits": {
         "author": "mosquito"
-      }
+      },
+      "upstream": "https://raw.githubusercontent.com/kepalegars/mosquito-mixbay-profiles/main/cards/rme/fireface-ucx/card.json"
     },
     {
       "id": "fireface-ucx2",
@@ -97,7 +99,8 @@
       "sha256": "6a5fcb68b4e2c4ce0ebb55879439732a141f78525ac838af9125addc0c78dd57",
       "credits": {
         "author": "mosquito"
-      }
+      },
+      "upstream": "https://raw.githubusercontent.com/kepalegars/mosquito-mixbay-profiles/main/cards/rme/fireface-ucx2/card.json"
     },
     {
       "id": "fireface-ufx",
@@ -109,7 +112,8 @@
       "sha256": "1139d1c80afe4a4c67ccd2fceec7a1aca4edb1abd056ef030b2d87355ea783d4",
       "credits": {
         "author": "mosquito"
-      }
+      },
+      "upstream": "https://raw.githubusercontent.com/kepalegars/mosquito-mixbay-profiles/main/cards/rme/fireface-ufx/card.json"
     },
     {
       "id": "fireface-ufx2",
@@ -121,7 +125,8 @@
       "sha256": "6b8dc56444a46d4ce862d533d6729b7f2319d6fc1eb5a37b17aca48a3111dc27",
       "credits": {
         "author": "mosquito"
-      }
+      },
+      "upstream": "https://raw.githubusercontent.com/kepalegars/mosquito-mixbay-profiles/main/cards/rme/fireface-ufx2/card.json"
     },
     {
       "id": "fireface-ufx3",
@@ -133,7 +138,8 @@
       "sha256": "2ce8b7239d47e22d4bd1853c20c420d3648855944e27062794d5460a4105c7a2",
       "credits": {
         "author": "mosquito"
-      }
+      },
+      "upstream": "https://raw.githubusercontent.com/kepalegars/mosquito-mixbay-profiles/main/cards/rme/fireface-ufx3/card.json"
     },
     {
       "id": "fireface-ufxplus",
@@ -145,7 +151,8 @@
       "sha256": "c73da41e08bd7054956de03d55c6c4f62d5b5b01012153f02ce9b8832405d229",
       "credits": {
         "author": "mosquito"
-      }
+      },
+      "upstream": "https://raw.githubusercontent.com/kepalegars/mosquito-mixbay-profiles/main/cards/rme/fireface-ufxplus/card.json"
     }
   ],
   "integrations": {
