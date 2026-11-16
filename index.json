@@ -70,7 +70,7 @@
       "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-802/card.json",
-      "sha256": "ee517606a0fb54fed170a20ff5976d9c3044edd86086210b2d6de0eac5aa3d20",
+      "sha256": "f207d07d00f1e4a03be47c6359867ba59b60bfe45f9c1a0db6a617ca9229af56",
       "credits": {
         "author": "mosquito"
       },
@@ -83,7 +83,7 @@
       "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ucx/card.json",
-      "sha256": "5925bdbce02cfa11c004f85c3da97b952ba9b348e882a087b1e148c7a9a2d826",
+      "sha256": "ddd6b85732bc72bb585d069402f84be44178f5798ed5e8086dfe08af78eab804",
       "credits": {
         "author": "mosquito"
       },
@@ -96,7 +96,7 @@
       "version": "v1.0.0",
       "native": true,
       "path": "cards/rme/fireface-ucx2/card.json",
-      "sha256": "8023ba87d3beeeeba6d027e829ef994a62a2c792d175a29f9da55db5f3ef3a4b",
+      "sha256": "bbe41f4107c70487bd26ff86fe65558fc4afcbc033c68213ccfd7cf7c62c063f",
       "credits": {
         "author": "mosquito"
       },
@@ -109,7 +109,7 @@
       "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ufx/card.json",
-      "sha256": "ea050f89c5e7e50d179d5fbcc21b8b0122fd56b39d0672087cc65d8110e3ec18",
+      "sha256": "7a34bebae24d98fd108cd3c7fc7bb1ce6a0d43e30fcbac027eb9ba265b6007fb",
       "credits": {
         "author": "mosquito"
       },
@@ -122,7 +122,7 @@
       "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ufx2/card.json",
-      "sha256": "250346ebd5ce29155daf9abcf3ff0050278fb271a18a624188c72e41ee6ffc87",
+      "sha256": "3ebe63abcd23ddc3144f3a7e204e6ee96997c9bd64e140f5caade9bcfa0a547d",
       "credits": {
         "author": "mosquito"
       },
@@ -135,7 +135,7 @@
       "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ufx3/card.json",
-      "sha256": "be7e66d43ac0cbc97e714fc8d637d8328828df7895f8b54eef8b51eb1d20a490",
+      "sha256": "4dc36a3e5754fd3c3878ff1b1452e0647393b86219a159780ef67f31702e12ec",
       "credits": {
         "author": "mosquito"
       },
@@ -148,7 +148,7 @@
       "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ufxplus/card.json",
-      "sha256": "421d759ba0e036b245ca5dafcad2464f27fd90f5c62f22daac4b657dad703606",
+      "sha256": "d876f90daa0ef17b231c12c5dd134816e75bc399a2e659fa7390a9b23684af9a",
       "credits": {
         "author": "mosquito"
       },
