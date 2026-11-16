@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "mosquito mixbay profiles",
-  "revision": "2026-11-15",
+  "revision": "2026-11-16",
   "cards": [
     {
       "id": "evo8",
@@ -31,10 +31,10 @@
       "id": "ugm192",
       "display": "ESI UGM192",
       "vendor": "ESI",
-      "version": "v0.1.0",
+      "version": "v1.0.0",
       "native": true,
       "path": "cards/ugm192/card.json",
-      "sha256": "771604c21fef454e895ead9cebaf1ebaede290c90ea79b4570c78784051ca1ba",
+      "sha256": "7877566a97aa9c8965d8c238459c2fdcf7f011f49eb4b115c2e942201c684885",
       "credits": {
         "author": "mosquito"
       }
