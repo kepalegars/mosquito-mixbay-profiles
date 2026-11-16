@@ -67,10 +67,10 @@
       "id": "fireface-802",
       "display": "RME Fireface 802",
       "vendor": "RME",
-      "version": "v0.1.0",
+      "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-802/card.json",
-      "sha256": "3d11da0e7248c7e4e9654ecb6ad7ed0df5e133579e42e9324f55b0c15bad8ac2",
+      "sha256": "ee517606a0fb54fed170a20ff5976d9c3044edd86086210b2d6de0eac5aa3d20",
       "credits": {
         "author": "mosquito"
       },
@@ -80,10 +80,10 @@
       "id": "fireface-ucx",
       "display": "RME Fireface UCX",
       "vendor": "RME",
-      "version": "v0.1.0",
+      "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ucx/card.json",
-      "sha256": "57c248355ac5ed3bc2a2163bc03be6981f034d459ae2887edffd7dcb863d95b0",
+      "sha256": "5925bdbce02cfa11c004f85c3da97b952ba9b348e882a087b1e148c7a9a2d826",
       "credits": {
         "author": "mosquito"
       },
@@ -93,10 +93,10 @@
       "id": "fireface-ucx2",
       "display": "RME Fireface UCX II",
       "vendor": "RME",
-      "version": "v0.2.0",
+      "version": "v1.0.0",
       "native": true,
       "path": "cards/rme/fireface-ucx2/card.json",
-      "sha256": "6a5fcb68b4e2c4ce0ebb55879439732a141f78525ac838af9125addc0c78dd57",
+      "sha256": "8023ba87d3beeeeba6d027e829ef994a62a2c792d175a29f9da55db5f3ef3a4b",
       "credits": {
         "author": "mosquito"
       },
@@ -106,10 +106,10 @@
       "id": "fireface-ufx",
       "display": "RME Fireface UFX",
       "vendor": "RME",
-      "version": "v0.1.0",
+      "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ufx/card.json",
-      "sha256": "1139d1c80afe4a4c67ccd2fceec7a1aca4edb1abd056ef030b2d87355ea783d4",
+      "sha256": "ea050f89c5e7e50d179d5fbcc21b8b0122fd56b39d0672087cc65d8110e3ec18",
       "credits": {
         "author": "mosquito"
       },
@@ -119,10 +119,10 @@
       "id": "fireface-ufx2",
       "display": "RME Fireface UFX II",
       "vendor": "RME",
-      "version": "v0.1.0",
+      "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ufx2/card.json",
-      "sha256": "6b8dc56444a46d4ce862d533d6729b7f2319d6fc1eb5a37b17aca48a3111dc27",
+      "sha256": "250346ebd5ce29155daf9abcf3ff0050278fb271a18a624188c72e41ee6ffc87",
       "credits": {
         "author": "mosquito"
       },
@@ -132,10 +132,10 @@
       "id": "fireface-ufx3",
       "display": "RME Fireface UFX III",
       "vendor": "RME",
-      "version": "v0.1.0",
+      "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ufx3/card.json",
-      "sha256": "2ce8b7239d47e22d4bd1853c20c420d3648855944e27062794d5460a4105c7a2",
+      "sha256": "be7e66d43ac0cbc97e714fc8d637d8328828df7895f8b54eef8b51eb1d20a490",
       "credits": {
         "author": "mosquito"
       },
@@ -145,10 +145,10 @@
       "id": "fireface-ufxplus",
       "display": "RME Fireface UFX+",
       "vendor": "RME",
-      "version": "v0.1.0",
+      "version": "v1.0.0",
       "native": false,
       "path": "cards/rme/fireface-ufxplus/card.json",
-      "sha256": "c73da41e08bd7054956de03d55c6c4f62d5b5b01012153f02ce9b8832405d229",
+      "sha256": "421d759ba0e036b245ca5dafcad2464f27fd90f5c62f22daac4b657dad703606",
       "credits": {
         "author": "mosquito"
       },
@@ -166,13 +166,13 @@
       }
     },
     "oscmix": {
-      "version": "2",
+      "version": "3",
       "path": "integrations/oscmix",
       "files": {
         "launch-oscmix-gtk": "156b9d275bed5e46db0804694c6588d7ad4871ec1a7588c7cd9c72a81b0831cb",
         "launch-oscmix-qt": "0c1fc6b82519bc0600f611af3b98365c372569a781a80f7a2ead2fbb761aca97",
-        "launch-oscmix-web": "2c353bb1ace019c39f8a64d155d0f06bfe99af77fdc6f3ee06be94f0dd23d3b2",
-        "setup-oscmix.sh": "e3cb329d03b3152de51dc0762f4487147fd650fd8f484cf0239e9f3050b9a48e"
+        "launch-oscmix-web": "8aedea335ce1111f3b4a1c89ae934997955768afe6b00630aef3cb0767da52a0",
+        "setup-oscmix.sh": "04f4c0735041fff5a53f60d47af7932ec56cc96162f0e3b8625f8f825e7b69d3"
       }
     }
   }

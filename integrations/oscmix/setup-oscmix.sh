@@ -134,6 +134,11 @@ install_engine() {
     [[ -f "$here/launch-oscmix-$b" ]] \
       && install -Dm755 "$here/launch-oscmix-$b" "$BIN_DIR/mixbay-oscmix-$b"
   done
+  # Old app entries: a dead "RME Fireface Mixer" (Exec no longer exists) and
+  # the web app under its pre-rename name. The current one is created by
+  # mixbay-oscmix-web on first use.
+  local apps="${XDG_DATA_HOME:-$HOME/.local/share}/applications"
+  rm -f "$apps/oscmix.desktop" "$apps/oscmix-gtk.desktop"
   ok "oscmix installed in $BIN_DIR"
 }
 
@@ -169,7 +174,8 @@ uninstall() {
   local b
   for b in "${BINS[@]}"; do rm -f "$BIN_DIR/$b"; done
   rm -f "$BIN_DIR/mixbay-oscmix-gtk" "$BIN_DIR/mixbay-oscmix-qt" "$BIN_DIR/mixbay-oscmix-web"
-  command -v omarchy-webapp-remove >/dev/null 2>&1 && omarchy-webapp-remove oscmix >/dev/null 2>&1 || true
+  local apps="${XDG_DATA_HOME:-$HOME/.local/share}/applications"
+  rm -f "$apps/oscmix.desktop" "$apps/oscmix-gtk.desktop" "$apps/OscMix Web (TotalMix).desktop"
   rm -rf "$LIB_DIR" "$DATA_DIR"
   ok "oscmix removed"
 }
