@@ -214,6 +214,37 @@
         }
       }
     },
+    "hardware": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "meters": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "node"
+          ],
+          "properties": {
+            "node": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.: -]+$"
+            },
+            "capture": {
+              "$ref": "#/$defs/channels"
+            },
+            "playback": {
+              "$ref": "#/$defs/channels"
+            },
+            "floor_db": {
+              "type": "number",
+              "minimum": -120,
+              "maximum": -1
+            }
+          }
+        }
+      }
+    },
     "captures": {
       "type": "array",
       "items": {
@@ -235,6 +266,17 @@
             "type": "string"
           }
         }
+      }
+    }
+  },
+  "$defs": {
+    "channels": {
+      "type": "array",
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
       }
     }
   }

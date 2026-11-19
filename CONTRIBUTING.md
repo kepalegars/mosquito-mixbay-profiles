@@ -33,3 +33,26 @@ uses (`tabBar`, `controlsGrid`, `controlsSingle`, `mixerGrid`,
 with a sparse `user/layout.json`; arrays replace, objects merge.
 
 Adding a preset is a Mixbay change, not a data change. Until then use `auto`.
+
+## Meters
+
+A card can describe its USB meter streams instead of relying on the native
+EVO/UGM discovery:
+
+```json
+"hardware": {
+  "meters": {
+    "node": "Quantum ES 4",
+    "capture": ["IN1", "IN2", "IN3", "IN4"],
+    "playback": ["OUT1", "OUT2"],
+    "floor_db": -48
+  }
+}
+```
+
+`node` is a fragment of the PipeWire node name (case, spaces, `_`, `-` and
+`.` are folded). `capture`/`playback` are the channel labels in stream order;
+their length is the channel count (8 maximum). `floor_db` is optional
+(default -60). A declared binding is authoritative: when the node is absent
+the card gets no meters, never another card's channels. The Levels page must
+be part of the card's composition (`levelsColumns`) for them to be visible.
